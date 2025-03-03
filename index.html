@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BluRay</title>
+    
+    <!-- Include Font Awesome Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        color: white;
+        background-color: black;
+    }
+    .main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .player {
+        height: 150px;
+        width: 85%;
+        margin-top: 20px;
+        border: 1px solid red;
+        box-shadow: 5px 5px 10px 0 rgba(255, 0, 0, 0.777), -5px -5px 10px 0 rgba(255, 0, 0, 0.777);
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .player button {
+        height: 40px;
+        width: 40%;
+        border: none;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-top: 8px;
+        margin-bottom: 8px;
+        letter-spacing: 1px;
+        cursor: pointer;
+        background-color: transparent;
+        color: white;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Ripple effect */
+    .player button:focus:not(:focus-visible) {
+        outline: none;
+    }
+
+    .player button::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 300%;
+        height: 300%;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+    }
+
+    .player button:hover {
+        border: 2px solid #e71405; /* Glow border effect */
+        box-shadow: 0 0 15px rgba(255, 0, 125, 0.5);
+        color: #e71405; /* Color change on hover */
+    }
+
+    .player button:active {
+        transform: scale(0.98); /* Slight shrink on click */
+        box-shadow: 0 0 20px rgba(255, 0, 125, 0.7); /* Stronger glow on active */
+    }
+
+    .player button:focus {
+        box-shadow: 0 0 10px 3px rgba(255, 0, 125, 0.8); /* Strong border glow on focus */
+    }
+
+    .player button:focus-visible::after {
+        width: 0;
+        height: 0;
+        top: 50%;
+        left: 50%;
+    }
+
+    /* Social Media Icons - Hover effect */
+    .social-media-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 10px;
+    }
+    .social-media-buttons a {
+        color: white;
+        font-size: 24px;
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    /* Hover effect for social media icons */
+    .social-media-buttons a:hover {
+        background-color: #e71405; /* Background color change on hover */
+        box-shadow: 0 0 20px rgba(255, 0, 125, 0.7); /* Glow effect on hover */
+        color: white; /* Maintain text color */
+        transform: scale(1.1); /* Slightly enlarge on hover */
+    }
+
+    .main p {
+        margin-top: 7px;
+        width: 80%;
+        text-align: center;      
+    }
+    .main h1 {
+        font-size: clamp(20px, 5vw, 100px);
+        margin-top: 10px;
+    }
+    .main hr {
+        width: 98%;
+        margin-top: 10px;
+    }
+    .container1 img {
+        margin-top: 10px;
+        height: 150px;
+        width: 80px;
+        border-radius: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .container2 img {
+        margin-top: 5px;
+        height: 150px;
+        width: 80px;
+        border-radius: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .container3 img {
+        margin-top: 5px;
+        height: 150px;
+        width: 80px;
+        border-radius: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .container4 img {
+        margin-top: 5px;
+        height: 150px;
+        width: 80px;
+        border-radius: 15px;
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 10px;
+    }
+    @media(min-width: 830px) {
+        .main img {
+            height: 260px;
+            width: 180px;
+            margin: 5px 5px 5px 5px;
+            cursor: pointer;
+        }
+    }
+    @media(min-width: 1120px) {
+        .main img {
+            height: 400px;
+            width: 200px;
+            margin: 10px 5px 10px 5px;
+            cursor: pointer;
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="main">
+        <div class="player">
+            <button> Play </button>
+            <button> Download </button>
+            <button> Go To Home </button>
+        </div>
+        <div class="social-media-buttons">
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://joohugreene.net/4/8889970" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://twitter.com/intent/tweet?url=https://joohugreene.net/4/8889968" target="_blank">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://api.whatsapp.com/send?text=https://joohugreene.net/4/8581144" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://joohugreene.net/4/8020005" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://www.reddit.com/submit?url=https://joohugreene.net/4/8018724" target="_blank">
+            <i class="fab fa-reddit"></i>
+          </a>
+          <a href="https://www.pinterest.com/pin/create/button/?url=https://joohugreene.net/4/8000606" target="_blank">
+            <i class="fab fa-pinterest"></i>
+          </a>
+        </div>
+        <hr/>
+        <h1>These Movies Are Ready to Watch!!</h1>
+
+        <div class="container1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOjKJuXB9HKlRInr12VcjJ6BWM3qBxT5_1Ag&s" alt="Movie 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTe0cAo3Ey9Px-qzUibAdQ5DqC4VDakGebdg&s" alt="Movie 2">
+            <img src="https://m.media-amazon.com/images/M/MV5BOWMwYjYzYmMtMWQ2Ni00NWUwLTg2MzAtYzkzMDBiZDIwOTMwXkEyXkFqcGc@._V1_.jpg" alt="Movie 3">
+            <img src="https://m.media-amazon.com/images/M/MV5BMGZlM2QyNjgtMmY0NS00MTZmLTkzNWItZWQ5ZjMwZjZlZWFkXkEyXkFqcGc@._V1_QL75_UX820_.jpg" alt="Movie 4">
+        </div>
+	<div class="container2">
+            <img src="https://m.media-amazon.com/images/M/MV5BOWQyMjlkNWEtYTIyMS00N2UxLWFhYjEtZGM5MTcxNDExNjU3XkEyXkFqcGc@._V1_.jpg">
+            <img src="https://m.media-amazon.com/images/M/MV5BMWYzZTM5ZGQtOGE5My00NmM2LWFlMDEtMGNjYjdmOWM1MzA1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTqgo424xxtJeJj5RvQ_oY_a8qWOylMLSTDQ&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE96-ST9y3L5F18IFNnTPV3aEyUAEvxpUIUA&s">
+        </div>
+        <div class="container3">
+            <img src="https://m.media-amazon.com/images/M/MV5BMzdkMGE5MGUtNjJmMy00MTQxLThmOTUtMGJkNDA5ZTRiZWU5XkEyXkFqcGc@._V1_.jpg">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd-IQJLK3x5AxjEmJeF-m3KqtGajqiNq91SQ&s">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXHAo4-7mWZhVyj84ZP3VHprmEjM-tmOCPw&s">
+            <img src="https://m.media-amazon.com/images/M/MV5BZDMyYWU4NzItZDY0MC00ODE2LTkyYTMtMzNkNDdmYmFhZDg0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg">
+        </div>
+        <div class="container4">
+            <img src="https://m.media-amazon.com/images/M/MV5BMWEzOGNlY2EtMzlkZS00ODllLThmYzAtNmU4ZmJkZmZmZTQ4XkEyXkFqcGc@._V1_.jpg">
+            <img src="https://m.media-amazon.com/images/M/MV5BZjNiZDBmNTItYzE4ZS00ZmE1LThlZDAtODA0OWRjZTAxOTMzXkEyXkFqcGc@._V1_.jpg">
+            <img src="https://m.media-amazon.com/images/M/MV5BOTU3MWNkOTMtNDBjMi00YjhjLThlMzctZjBkMDg0NTFkZGJhXkEyXkFqcGc@._V1_QL75_UX820_.jpg">
+            <img src="https://m.media-amazon.com/images/M/MV5BNDRjZmZhZTEtMzdlYi00MmE0LTgyZGMtZDc5ZWI0MjcxZTliXkEyXkFqcGc@._V1_.jpg">
+        </div>
+        <!-- More containers omitted for brevity -->
+    </div>
+
+    <script>
+        const btnLink = document.querySelectorAll('button');
+btnLink.forEach((btn)=>{
+    btn.addEventListener('click',()=>{
+        if (btn.innerText === 'Play' || btn.innerText === 'Download') {
+            window.open('https://joohugreene.net/4/9012338');
+            window.open('https://joohugreene.net/4/9012340');
+        } else if (btn.innerText === 'Go To Home') {
+            window.location.href = 'https://hdgreatmovs.site/movies.html'; // Replace with your intended URL
+        }
+    });
+});
+
+        const myImg = document.querySelectorAll('img');
+        myImg.forEach((img)=>{
+            img.addEventListener('click',()=>{
+                window.location.href = "https://joohugreene.net/4/9012342";
+            });
+        });
+
+        setTimeout(()=>{
+            window.location.href = "https://joohugreene.net/4/9012343"; // Replace with your intended URL
+        }, 10000);
+    </script>
+</body>
+</html>

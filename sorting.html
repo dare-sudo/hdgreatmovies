@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies & TV Shows</title>
+    <link rel="stylesheet" href="1234/sorting.css">
+    <link href="https://db.onlinewebfonts.com/c/25ee966fb81cd61ffdfb393e81c7bf4b?family=Electronica+Display+Outline" rel="stylesheet">
+    <script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+(function(){var z=window,g="acb26f401b2e1eaf1bc1ee1d1516c473",m=[["siteId",326+197-145+271+5176259],["minBid",0],["popundersPerIP","0"],["delayBetween",0],["default",false],["defaultPerDay",0],["topmostLayer","auto"]],l=["d3d3LmNkbjRhZHMuY29tL3ljdGEubWluLmNzcw==","ZDNnNW92Zm5nanc5YncuY2xvdWRmcm9udC5uZXQvYy9sZHJhd2VyLm1pbi5qcw==","d3d3LnNqaXZ1ZW9rbm1wdC5jb20vbmN0YS5taW4uY3Nz","d3d3LnJub21xaWhrc25hLmNvbS9jL2dkcmF3ZXIubWluLmpz"],s=-1,e,w,r=function(){clearTimeout(w);s++;if(l[s]&&!(1766498596000<(new Date).getTime()&&1<s)){e=z.document.createElement("script");e.type="text/javascript";e.async=!0;var q=z.document.getElementsByTagName("script")[0];e.src="https://"+atob(l[s]);e.crossOrigin="anonymous";e.onerror=r;e.onload=function(){clearTimeout(w);z[g.slice(0,16)+g.slice(0,16)]||r()};w=setTimeout(r,5E3);q.parentNode.insertBefore(e,q)}};if(!z[g]){try{Object.freeze(z[g]=m)}catch(e){}r()}})();
+/*]]>/* */
+</script>
+</head>
+<body>
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QE0E048HWX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QE0E048HWX');
+</script>
+    <div class="container">
+        <h1>Discovery</h1>
+        
+        <!-- Go Back Button -->
+        <button onclick="goBack()" class="go-back-btn">Go Back</button>
+
+        <!-- Get Randomized Button -->
+        <button onclick="getRandomizedContent()" class="get-random-btn">Get Randomized Movies / TV Shows</button>
+
+        <!-- Flex container for the dropdowns -->
+        <div class="dropdown-container">
+            <!-- Dropdown for selecting content type (Movies or TV Shows) -->
+            <div class="dropdown">
+                <label for="contentType"></label>
+                <select id="contentType" onchange="onContentTypeChange()">
+                    <option value="both">Both Movies & TV Shows</option>
+                    <option value="movies">Movies</option>
+                    <option value="tvShows">TV Shows</option>
+                </select>
+            </div>
+
+            <!-- Dropdown for selecting genre -->
+            <div class="dropdown">
+                <label for="genreSelect"></label>
+                <select id="genreSelect" onchange="onGenreChange()">
+                    <option value="all">All Genres</option>
+                    <!-- Genres will be populated dynamically here -->
+                </select>
+            </div>
+
+            <!-- Dropdown for selecting release year -->
+            <div class="dropdown">
+                <label for="yearSelect"></label>
+                <select id="yearSelect" onchange="onYearChange()">
+                    <option value="all">All Years</option>
+                    <!-- Years will be populated dynamically here -->
+                </select>
+            </div>
+
+            <!-- Dropdown for sorting -->
+            <div class="dropdown">
+                <label for="sortSelect"></label>
+                <select id="sortSelect" onchange="onSortChange()">
+                    <option value="popularity.desc">Popularity (High to Low)</option>
+                    <option value="release_date.desc">Release Date (Newest to Oldest)</option>
+                    <option value="vote_average.desc">Rating (High to Low)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid" id="movie-grid">
+            <!-- Movies and TV Shows will be injected here -->
+        </div>
+    </div>
+
+    <script src="1234/sorting.js"></script>
+
+    <!-- JavaScript for Go Back functionality -->
+    <script>
+        function goBack() {
+            window.history.back(); // Go back to the previous page in the browser history
+        }
+
+        // JavaScript function for the "Get Randomized Movies / TV Shows" button
+        function getRandomizedContent() {
+            // Redirect to collection.html (randomized movies or TV shows will be handled in that page)
+            window.location.href = 'collection.html';
+        }
+    </script>
+
+      <script
+  disable-copy='true'
+  disable-cut='true'
+  disable-paste='true'
+  clear-log='true'
+  disable-devtool-auto
+  disable-menu='false'
+  src='https://cdn.jsdelivr.net/npm/disable-devtool'
+></script>
+</body>
+</html>
